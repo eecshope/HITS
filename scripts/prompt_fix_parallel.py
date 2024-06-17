@@ -102,7 +102,9 @@ def main():
                 _code_fixer = fix_code.TestFixer(prompt_root, "system_repair.jinja2", "repair.jinja2")
             else:
                 _code_fixer = fix_code.TestFixer(prompt_root, "system_repair.jinja2", "repair_patch.jinja2")
-            _chatter = open_generator.OpenGenerator(model='gpt-3.5-turbo-0125', monitor=monitor)
+            _chatter = open_generator.OpenGenerator(key=api_keys,
+                                                    request_url=model_url,
+                                                    model='gpt-3.5-turbo-0125', monitor=monitor)
             try:
                 _fix_result = _code_fixer.single_unitest_fix(_log_dir,
                                                              db.get_collection(_method_to_test),

@@ -59,7 +59,8 @@ def main():
             _code_getter = get_code.InitialCodeGenerator(prompt_root,
                                                          "system_gen.jinja2",
                                                          "gen_code.jinja2")
-        _chatter = open_generator.OpenGenerator(model='gpt-3.5-turbo-0125', monitor=monitor)
+        _chatter = open_generator.OpenGenerator(key=api_keys, request_url=model_url,
+            model='gpt-3.5-turbo-0125', monitor=monitor)
         _log_dir = os.path.join(playground_dir, project_name, method_workspaces_prefix,
                                 meta_info['method_name_to_idx'][_method_to_test])
         if args.fixing and not os.path.exists(os.path.join(_log_dir.__str__(), 'slice_fixing', 'slice_result.jsonl')):

@@ -38,7 +38,8 @@ def main():
         _slicer = get_slices.SliceInfoGenerator("prompts/no_mock",
                                                 "system_gen.jinja2",
                                                 "gen_slice.jinja2")
-        _chatter = open_generator.OpenGenerator(model='gpt-3.5-turbo-0125',
+        _chatter = open_generator.OpenGenerator(key=api_keys, request_url=model_url,
+                                                model='gpt-3.5-turbo-0125',
                                                 monitor=monitor)  # share the monitor. Since multi-thread has GIL lock
         _log_dir = os.path.join(playground_dir, project_name, "methods",
                                 meta_info['method_name_to_idx'][_method_to_test])

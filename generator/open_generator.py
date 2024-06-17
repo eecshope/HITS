@@ -14,8 +14,8 @@ from generator import api_process_parallel
 
 
 class OpenGenerator:
-    def __init__(self, key='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',
-                 request_url='https://mycloseai.salutworld.xyz/v1/chat/completions',
+    def __init__(self, key,
+                 request_url,
                  model='gpt-3.5-turbo-1106',
                  monitor: Optional[ChatRateLimiter] = None):
         """

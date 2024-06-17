@@ -49,6 +49,7 @@ playground_dir = transform_path(config.get("DEFAULT", "playground"))
 
 api_keys = eval(config.get("openai", "api_keys"))
 model = config.get("openai", "model")
+model_url = config.get("openai", "model_url")
 temperature = eval(config.get("openai", "temperature"))
 top_p = eval(config.get("openai", "top_p"))
 frequency_penalty = eval(config.get("openai", "frequency_penalty"))

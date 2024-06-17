@@ -21,6 +21,9 @@ For step 3, you need to download the dataset provided via the private link [url]
    1. Be aware that map the directory created in step 1 to the container as `/root/experiments` 
 4. install dependencies provided in this repo to the container
 5. install java 17 to the container
-6. Generate test cases following the procedures in step 2.
+6. Edit the `config_template.ini` and save as `config.ini`. You need to set:
+   1. mondo db info
+   2. openai info
+6. Generate test cases following the procedures in step 2. 
 
 If you don't want to execute the whole generation process, we also provide the test cases already generated in the link provided above.
