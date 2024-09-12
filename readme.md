@@ -1,6 +1,6 @@
-# Repository for SlicePromptTest4J
+# Repository for HITS
 
-This is the source code repo for SlicePromptTest4J. This repo supports you to inspect
+This is the source code repo for HITS. This repo supports you to inspect
 1. The detailed implementation of our prompt design (COT-procedures, instructions and examples)
 2. The detailed implementation of the whole working procedure
 3. Code to reproduce the experiment results
